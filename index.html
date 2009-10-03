@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.1 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xml:lang="en"
+	  lang="en">
+	<head>
+
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.js"></script>		
+		<script type="text/javascript" src="jquery.constrain.js"></script>		
+	
+	</head>
+	<body>
+		<script type="text/javascript">
+			$(function() {	
+				$(".constrain-limit").constrain({
+					limit:	{"p":1,"\\":4}
+				});
+				
+				$(".constrain-prohibitalpha").constrain({
+					prohibit:	{ regex: "[a-zA-Z]"}
+				});
+				
+				$(".constrain-prohibitalphachars").constrain({
+					prohibit:	{ chars: "aeioaAEIOU"}
+				});
+				
+				$(".constrain-allowalpha").constrain({
+					allow:	{ regex: "[a-zA-Z]"}
+				});
+				
+				$(".constrain-allowalphachars").constrain({
+					allow:	{ chars: "aeioaAEIOU"}
+				});
+				
+				$(".double").numeric({format:"0.0"});
+				
+				$(".double-keyup").numeric({format:"0.000",onblur:false});
+				
+				$(".integer").numeric();
+			});
+		</script>		
+		
+		<h3>jQuery Constrain Plugin</h3>
+		<p>To constrain values for a text box, such as alphanumeric</p>
+		<p>Constrain with max 'p' 1 occurence and '\' 4 occurrences</p>
+		<input type="text" class="constrain-limit" />
+		
+		<p>Constrain with alpha prohibited</p>
+		<input type="text" class="constrain-prohibitalpha" />
+		<p>Constrain with vowels prohibited</p>
+		<input type="text" class="constrain-prohibitalphachars" />
+		
+		<p>Constrain with only alpha allowed</p>		
+		<input type="text" class="constrain-allowalpha" />
+		<p>Constrain with only vowels allowed</p>
+		<input type="text" class="constrain-allowalphachars" />
+		
+		<p>Numeric (double)</p>
+		<input type="text" class="double" />
+		<input type="text" class="double-keyup" />
+		
+		<p>Numeric (int)</p>
+		<input type="text" class="integer" />
+	</body>
+</html>
