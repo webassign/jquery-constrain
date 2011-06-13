@@ -1,6 +1,6 @@
 /*
 	jquery.constrain plugin
-	* You may distribute this code under the same license as jQuery (BSD or GPL)*/
+	* You may distribute this code under the same license as jQuery (BSD or GPL)
 	
 	$.constrain usage:
 		//limit field to having maximum of one 'p' and four '\'		
