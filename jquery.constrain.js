@@ -61,12 +61,14 @@
 		//does the prohibit or allow collection find a match given the key?
 		function match(item,input,e) {
 			var arr = item.chars.split("");
-			for(var i in arr) {													
-				var token = arr[i];
-				if(token.charCodeAt(0)==e.which) {
-					return true;
+			if( arr.length) {
+				for(var i in arr) {													
+					var token = arr[i];
+					if(token.charCodeAt(0)==e.which) {
+						return true;
+					}
 				}
-			}								
+			}
 			if( item.regex) {		
 				var re = new RegExp(item.regex);
 				if(re.test(String.fromCharCode(e.which))){
